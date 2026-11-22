@@ -1,0 +1,51 @@
+{
+  "name": "os_courseproject",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A comprehensive Operating System course project implementing memory management, process scheduling, and job processing.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:phase1": "g++ phase1/os_phase1.cpp -o phase1/os_phase1.exe",
+    "build:phase2": "g++ phase2/os_phase2.cpp -o phase2/os_phase2.exe",
+    "test:scheduler": "g++ -std=c++11 cpp/cpu_scheduler.cpp cpp/test_scheduler.cpp -o cpp/test_scheduler.exe && .\\cpp\\test_scheduler.exe",
+    "test:process": "g++ -std=c++11 cpp/process_manager.cpp cpp/test_process_manager.cpp -o cpp/test_process_manager.exe && .\\cpp\\test_process_manager.exe",
+    "test:memory": "g++ -std=c++11 cpp/memory_manager.cpp cpp/test_memory_manager.cpp -o cpp/test_memory_manager.exe && .\\cpp\\test_memory_manager.exe",
+    "test:deadlock": "g++ -std=c++11 cpp/deadlock_manager.cpp cpp/test_deadlock_manager.cpp -o cpp/test_deadlock_manager.exe && .\\cpp\\test_deadlock_manager.exe",
+    "test:disk": "g++ -std=c++11 cpp/disk_scheduler.cpp cpp/test_disk_scheduler.cpp -o cpp/test_disk_scheduler.exe && .\\cpp\\test_disk_scheduler.exe",
+    "test:frontend": "vitest run",
+    "test:all": "npm run test:scheduler && npm run test:process && npm run test:memory && npm run test:deadlock && npm run test:disk && npm run test:frontend",
+    "build:wasm": "emcc wasm/os_engine.cpp cpp/deadlock_manager.cpp cpp/disk_scheduler.cpp -o public/os_engine.js -O3 -s WASM=1 -s MODULARIZE=1 -s EXPORT_NAME=createOSEngine --bind -s ALLOW_MEMORY_GROWTH=1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemantbhoyar45/OS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hemantbhoyar45/OS/issues"
+  },
+  "homepage": "https://github.com/hemantbhoyar45/OS#readme",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.77.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "autoprefixer": "^10.7.0",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
+}
