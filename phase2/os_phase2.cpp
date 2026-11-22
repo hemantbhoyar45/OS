@@ -10,7 +10,6 @@ using namespace std;
 #include <ctime>
 #include <iomanip>
 
-
 // Phase 2 Registers and Counters
 char IR[4];
 char R[4];

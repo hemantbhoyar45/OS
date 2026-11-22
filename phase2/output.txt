@@ -1,47 +1,5 @@
 
-JOB ID: 0001 - OPERATION CODE ERROR
-IC: 01  IR: GS20  TTC: 1  LLC: 0
-
-
-NOT SAME                                
-
-JOB ID: 0002 - NO ERROR
-IC: 09  IR: H     TTC: 13  LLC: 1
-
-
-
-JOB ID: 0003 - LINE LIMIT EXCEEDED
-IC: 02  IR: PD10  TTC: 3  LLC: 1
-
-
-$                                       
-$   $                                   
-$   $   $                               
-$   $                                   
-$                                       
-
-JOB ID: 0004 - NO ERROR
-IC: 16  IR: H     TTC: 25  LLC: 5
-
-
-
-JOB ID: 0005 - OPERATION CODE ERROR
-IC: 02  IR: 9PD2  TTC: 3  LLC: 0
-
-
-
-JOB ID: 0006 - OUT OF DATA
-IC: 01  IR: GD20  TTC: 2  LLC: 0
-
-
-VALID FLT OK                            
-
-JOB ID: 0007 - NO ERROR
-IC: 03  IR: H     TTC: 4  LLC: 1
-
-
-
-JOB ID: 0008 - OPERATION CODE ERROR
-IC: 01  IR: OP00  TTC: 1  LLC: 0
+JOB ID: 0002 - INVALID PAGE FAULT
+IC: 05  IR: LR20  TTC: 9  LLC: 0
 
 
